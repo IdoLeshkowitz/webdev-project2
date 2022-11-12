@@ -1,0 +1,7 @@
+.form-bottom{
+    display: flex;
+    align-items: baseline;
+    @include form-button;
+    flex-wrap: wrap;
+    
+}

@@ -7,9 +7,9 @@
 .feed-box{
     display:flex;
     flex-direction: column;
-    flex-grow: 1;
     justify-content: space-between;
-    min-height: calc(100%*5);
+    row-gap: 1rem;
+    //min-height: calc(100%*5);
     max-width: 100%;
     padding:0px var(--padding-feed-box-sides) var(--padding-feed-box-bottom) var(--padding-feed-box-sides);
     & .feed-box-item{

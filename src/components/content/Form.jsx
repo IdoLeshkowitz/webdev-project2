@@ -19,9 +19,13 @@ function Forma() {
   }
   return (
     <div className="feed-box-item feed-form-box">
-      <h1 className="title">Register</h1>
-      <form action="#" id="form" className="feed-input-area">
-        <div className="form-user-details">
+      
+      {/* form header */}
+      <h1 className="form-header">Register</h1>
+        <form action="#" id="form" className="form-body-box">
+        
+        {/* form body  */}
+           <div className="form-user-details">
           <div className="input-box">
             <span className="details">full name</span>
             <input
@@ -58,35 +62,13 @@ function Forma() {
               required
             ></input>
           </div>
-        </div>
-        <div className="form-rating">
-          <input type="radio" name="rating" id="dot-1"></input>
-          <input type="radio" name="rating" id="dot-2"></input>
-          <input type="radio" name="rating" id="dot-3"></input>
-          <input type="radio" name="rating" id="dot-4"></input>
-          <input type="radio" name="rating" id="dot-5"></input>
-          <span className="rating-title">rating</span>
-          <div className="rating-category">
-            <label for="dot-1">
-              <span className="dot one"></span>
-              <span className="rating-text">1</span>
-            </label>
-            <label for="dot-2">
-              <span className="dot two"></span>
-              <span className="rating-text">2</span>
-            </label>
-            <label for="dot-3">
-              <span className="dot three"></span>
-              <span className="rating-text">3</span>
-            </label>
-          </div>
-        </div>
-        <div className="form-bottom">
-        <div className="form-message">
-          <label for="message" className="form-message-details">
-            message<textarea id="message" name="message"></textarea>
+        </div> 
+           <div className='form-body-message-selection'>
+       
+          <label for="message" className="form-message-box">
+          <span>message</span>  <textarea id="message" name="message"></textarea>
           </label>
-        </div>
+       
         
         <div className="form-find">
           <label for="find">how did you find us</label>
@@ -96,8 +78,40 @@ function Forma() {
             <option value="c">c</option>
           </select>
         </div>
-        </div>
-        <div className="buttons">
+         </div>
+           <div className="form-body-rating">
+            <input type="radio" name="rating" id="dot-1"></input>
+            <input type="radio" name="rating" id="dot-2"></input>
+            <input type="radio" name="rating" id="dot-3"></input>
+            <input type="radio" name="rating" id="dot-4"></input>
+            <input type="radio" name="rating" id="dot-5"></input>
+            <span className="form-body-rating-header">rating</span>
+            <div className="form-body-rating-selection">
+              <label for="dot-1">
+                <span className="dot one"></span>
+                <span className="rating-text">1</span>
+              </label>
+              <label for="dot-2">
+                <span className="dot two"></span>
+                <span className="rating-text">2</span>
+              </label>
+              <label for="dot-3">
+                <span className="dot three"></span>
+                <span className="rating-text">3</span>
+              </label>
+              <label for="dot-4">
+                <span className="dot four"></span>
+                <span className="rating-text">4</span>
+              </label>
+              <label for="dot-5">
+                <span className="dot five"></span>
+                <span className="rating-text">5</span>
+              </label>
+            </div>
+          </div> 
+    
+
+        <div className="form-bottom">
           <input type="submit"></input>
           <input type="reset"></input>
         </div>
@@ -107,3 +121,5 @@ function Forma() {
 }
 
 export default Forma;
+
+

@@ -2,6 +2,7 @@
   //main grid import
   @include grid-article-box;
   direction: rtl;
+  min-height: 220px;
 }
   @include hover-effects;
 

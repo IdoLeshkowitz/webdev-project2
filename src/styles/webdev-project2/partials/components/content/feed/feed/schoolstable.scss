@@ -1,0 +1,6 @@
+.feed-schoolstable-box{
+    @media #{$break1}{
+        display: none;
+    }
+    padding:1rem;
+}
