@@ -1,0 +1,13 @@
+.feed-book-box {
+  //main grid import
+  @include grid-article-box;
+  direction: rtl;
+}
+  @include hover-effects;
+
+
+
+
+
+
+

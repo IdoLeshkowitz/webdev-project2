@@ -1,0 +1,35 @@
+#root {
+  background-color: var(--color-blue-1);
+  background-image: var(--color-background-image-blue-1);
+  @include links-reset;
+  @include lists-reset;
+  @include font-size-reset;
+  //global fonts- fix it!!! define couple scss variables and use one or more in each part
+
+  font-family: #{$font-family-1};
+}
+
+//size configuration
+#root {
+  @include grid-main-page;
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // right: 0;
+  // left: 0;
+  // margin:0;
+  // padding:0;
+  //for mobile orientation-
+  // @media #{$break1} {
+  //   position: absolute;
+  //   min-height:100%;
+  //   width:100%
+  // }
+
+  // //for desktop orientation
+  // @media #{$break2} {
+  //   height:100%;
+  //   width:100%
+  // }
+}
+

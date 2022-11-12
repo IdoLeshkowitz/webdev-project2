@@ -1,0 +1,60 @@
+//@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+$font-family-1:"'Roboto Slab', serif;";
+
+#root{
+      --font-size-header-1:50px;
+      --font-size-feed-header-1:30px;
+      --font-size-text-big:18px;
+      --font-size-text-small:13px;
+      --font-size-text-medium:15px;
+      --font-weight-1:600;
+      --font-weight-2:1000;
+}
+
+
+@mixin font-size-reset {
+    h1 {
+      height: fit-content;
+      margin: 0;
+     
+    }
+    @media #{$break1} {
+      h1 {
+        font-size: var(--font-size-header-1-big);
+      }
+      font-size: var(--font-size-text-small);
+      font-weight: var(--font-weight-1);
+    }
+    @media #{$break2} {
+      h1 {
+        font-size: var(--font-size-header-1-small);
+      }
+      font-size: var(--font-size-text-big);
+      font-weight: var(--font-weight-1);
+    }
+  }
+
+
+  // @mixin font-size-generator{
+  //   //mobile font size
+  //   @media #{$break1} {
+  //     --font-size-header-1:50px;
+  //     --font-size-feed-header-1:30px;
+  //     --font-size-text-big:18px;
+  //     --font-size-text-small:13px;
+  //     --font-size-text-medium:15px;
+  //     --font-weight-1:600;
+  //     --font-weight-2:1000;
+  //   }
+  //   //desktop font size
+  //   @media #{$break2} {
+  //     --font-size-header-1:60px;
+  //     --font-size-feed-header-1:35px;
+  //     --font-size-text-big:20px;
+  //     --font-size-text-small:14px;
+  //     --font-size-text-medium:17px;
+  //     --font-weight-1:600;
+  //     --font-weight-2:1000;
+  //   }
+  //   }

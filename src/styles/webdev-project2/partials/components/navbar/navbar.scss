@@ -1,0 +1,16 @@
+.c-main-navbar{
+    grid-area: n;
+    display: flex;
+    margin: 0%;
+    list-style: none;
+    padding: 0;
+    @media #{$break1}{       
+    }
+    @media #{$break2}{
+    }
+    & li{
+        border-top: 1px solid black;
+        
+    }
+  
+}

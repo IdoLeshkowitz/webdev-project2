@@ -1,0 +1,11 @@
+.feed-box{
+//mobile orientation
+@media #{$break1}{
+    --padding-feed-box-sides:0.5rem;
+    --padding-feed-box-bottom:0.5rem;
+}
+@media #{$break2}{
+   --padding-feed-box-sides:1.5rem;
+   --padding-feed-box-bottom:0.5rem;
+}
+}

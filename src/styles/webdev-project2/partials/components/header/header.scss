@@ -1,0 +1,21 @@
+@import './../../../sass-variables.scss';
+.page-header-box {
+  //header flexbox sttings
+  grid-area: h;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+//border and background settings
+  border:1px solid var(--color-black-1);
+  --border-margin:0.3rem;
+  margin: var(--border-margin) var(--border-margin) 0 var(--border-margin);
+  border-radius: calc(var(--border-margin)*2.5) ;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  //add padding to text
+  h1{
+    padding-left:2rem;
+    padding-right:1.5rem ;
+    font-size: var(--font-size-header-1)!important;
+  }
+  
+}

@@ -1,0 +1,59 @@
+
+
+@mixin links-reset {
+  a:link {
+    color: black;
+  }
+  & a:visited {
+    color: black;
+  }
+}
+
+
+@mixin lists-reset {
+  & ul {
+    list-style: none;
+  }
+}
+
+
+@mixin hide-scrollbar{
+   /* Hide scrollbar for Chrome, Safari and Opera */
+&::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+}
+@mixin hide-text{
+.main-page-box:has(.feed-article-img-hover-area:hover) {
+  transition: #{$transition-1};
+  color: transparent !important ;
+}
+}
+
+
+@mixin hover-effects{
+  .feed-book-box:has(.feed-article-img-hover-area:hover) {
+    .feed-article-content,
+    .feed-article-header {
+      color: transparent;
+      transition: #{$transition-1};
+    }
+    overflow-y: visible;
+    
+  } 
+  // .main-page-box:has(.feed-article-img-hover-area:hover) {
+  //   transition: #{$transition-1};
+  //   color: transparent !important ;
+  // }
+  .feed-box-item:has(.feed-article-img-hover-area:hover){
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+
+  }
+}
+
+

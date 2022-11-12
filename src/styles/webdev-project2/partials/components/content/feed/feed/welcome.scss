@@ -1,0 +1,12 @@
+.welcome-link-box{
+@include grid-link-box;
+}
+
+.feed-welcome-box{
+    grid-template-rows:minmax(65vh,max-content);
+    //min-height: 100vh;
+    @include grid-common-static-vertical;
+    & h1{
+        @include grid-common-header;
+    }
+}

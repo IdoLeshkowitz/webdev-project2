@@ -1,0 +1,19 @@
+@import "./feed/feed.scss";
+.content-box {
+  grid-area: c;
+  //   overflow-x: visible;
+  //   overflow-y: hidden;
+  //   position: relative;
+  //   max-height: 100%;
+  overflow: scroll;
+  position: static;
+  & :has(.book-article-img:hover) {
+    overflow-y: visible;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include hide-scrollbar;
+
+}

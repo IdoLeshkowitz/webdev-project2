@@ -1,0 +1,8 @@
+.page-footer-box{
+    @include grid-common-dynamic('column','row');
+    grid-area: f;
+    border:1px solid var(--color-black-1);
+    --border-margin:0.3rem;
+    margin: 0 var(--border-margin) var(--border-margin)   var(--border-margin);
+    border-radius: calc(var(--border-margin)*2.5) 
+    }

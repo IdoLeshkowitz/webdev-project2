@@ -1,0 +1,130 @@
+
+.feed-form-box {
+    @include input-text;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  column-gap: 2rem;
+  border-radius: var(--border-radius-1);
+  
+  //buttons style
+  & .buttons {
+    @include form-button;
+  }
+
+}
+
+
+.feed-input-area{
+   // width: 100%;
+   display:flex;
+   flex-direction: column;
+   row-gap: 2rem;
+   align-items: center;
+}
+
+
+
+
+.form-user-details {
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    & .input-box{
+        flex-basis: 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+//   max-width: 100%;
+//   flex-direction: row;
+//   & .input-box {
+//     //margin-bottom: 15px;
+//     //width: calc(100% / 2 - 20px);
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-shrink: auto;
+
+//     & span {
+//       display: block;
+//       font-weight: var(--font-weight-2);
+//       margin-bottom: 5px;
+//       font-size: var(--font-size-text-medium);
+//     }
+//   }
+}
+
+.form-rating {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  .rating-title {
+    font-size: var(--font-size-text-medium);
+    font-weight: var(--font-weight-2);
+  }
+  #dot-1:checked ~ .rating-category label .one,
+  #dot-2:checked ~ .rating-category label .two,
+  #dot-3:checked ~ .rating-category label .three {
+    background: #9b59b6;
+    border-color: #d9d9d9;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+.rating-category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+  & label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    & .dot {
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      margin-right: 10px;
+      background: #d9d9d9;
+      border: 5px solid transparent;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.form-message-details{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    & textarea{
+        min-height:50px;
+    }
+}
+
+
+.form-find{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & select{
+        min-width:200px;
+    }
+}
+
+.form-bottom{
+    display: flex;
+    align-items: baseline;
+}

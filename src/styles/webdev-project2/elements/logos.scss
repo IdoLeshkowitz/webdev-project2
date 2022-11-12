@@ -1,0 +1,28 @@
+.e-main-logo {
+  height: 60px;
+  width: 60px;
+}
+
+.e-main-name {
+  display: grid;
+  align-content: center;
+}
+
+.logos-git {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.logos-email-small {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  &:link {
+    color: black;
+  }
+}
+
+.header-logo {
+  transform: scale(2);
+}
