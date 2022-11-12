@@ -1,16 +1,28 @@
 .c-main-navbar{
     grid-area: n;
     display: flex;
-    margin: 0%;
-    list-style: none;
-    padding: 0;
-    @media #{$break1}{       
+    justify-content: center;
+    & ul{
+        padding: 0;
+        display: flex;
+        @media #{$break1}{
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+        }
+        @media #{$break2}{
+            flex-direction: column;
+            justify-content: space-evenly;
+            column-gap: 1rem;
+        }
     }
-    @media #{$break2}{
+    & a{
+        &:link{
+            text-decoration: none;
+        }
+        &:visited{
+
+        }
     }
-    & li{
-        border-top: 1px solid black;
-        
-    }
-  
 }
