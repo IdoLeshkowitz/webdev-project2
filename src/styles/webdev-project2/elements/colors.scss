@@ -13,4 +13,9 @@
     //gradients
     --color-gradient-1:linear-gradient(135deg, #71b7e6, #9b59b6);
     --color-gradient-2:linear-gradient(-135deg, #71b7e6, #9b59b6);
+
+&:has(.header-theme-selector:checked){
+    --color-background-image-blue-1:linear-gradient(62deg, #8EC5FC 0%, #a8a0a8 0%);
 }
+    }
+
