@@ -1,155 +1,149 @@
 //@import "./../no-styles";
 $g-main-grid-template-columns: 1fr 1fr 1fr;
 
-.form-text-grid{
-    display: flex;
-    height: fit-content;
+.form-text-grid {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+@mixin grid-link-box {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin grid-common-dynamic($desktop-orientaion, $mobile-orientation) {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  @media #{$break1} {
+    grid-auto-flow: #{$mobile-orientation};
+    row-gap: 1px;
+  }
+  @media #{$break2} {
+    grid-auto-flow: #{$desktop-orientaion};
+    column-gap: 1%;
+  }
+}
+
+@mixin grid-common-static-vertical {
+  display: grid;
+  margin: 0%;
+  overflow-y: hidden;
+}
+@mixin grid-common-header {
+  display: grid;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  height: min-content;
+}
+
+@mixin grid-main-page {
+  //vertical mode
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  @media #{$break1} {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     justify-content: space-between;
-    column-gap: 15px;
-}
+    grid-template-areas: "h" "n" "c" "f";
+  }
 
-@mixin grid-link-box{
-    display:flex ;
-    justify-content: space-evenly;
-    position:relative;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-}
-
-
-@mixin grid-common-dynamic($desktop-orientaion,$mobile-orientation){
-    align-items: center;
-    justify-content:center;
-    display:grid;
-    @media #{$break1}{
-        grid-auto-flow:#{$mobile-orientation};
-        row-gap: 1px;
-    }
-    @media #{$break2}{
-        grid-auto-flow:#{$desktop-orientaion};
-        column-gap: 1%;
-}
-}
-
-@mixin grid-common-static-vertical{
+  //horizontal mode
+  @media #{$break2} {
     display: grid;
-    margin: 0%;
-    overflow-y: hidden;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 7fr 1fr;
+    grid-template-areas:
+      "h h"
+      "n c"
+      "f f";
+  }
 }
- @mixin grid-common-header{
-    display: grid;
-    justify-content: space-evenly;
-    padding:0;
-    margin: 0;
-    height:min-content;
- }
 
- @mixin grid-main-page{
-    //vertical mode
-    position: absolute;
-    top:0;
-    bottom: 0;
-    margin:0;
-    padding:0;
-    left:0;
-    right:0;
-    @media #{$break1} {
-      display:grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      justify-content: space-between;
-      grid-template-areas: 'h' 'n' 'c' 'f';
-      }
-
-    //horizontal mode
-      @media #{$break2} {
-        display: grid;
-        grid-template-columns: 1fr 7fr;
-        grid-template-rows: 1fr 7fr 1fr;
-        grid-template-areas:
-          "h h"
-          "n c"
-          "f f";
-      }
-
- }
-
- @mixin grid-article-box{
-
+@mixin grid-article-box {
   min-height: 100%;
   min-width: 100%;
-    display:grid;
-       //vertical mode
-       @media #{$break1} {
-        grid-template-columns: auto;
-        grid-auto-flow: row;
-        justify-content: center;
-        grid-template-areas:'article-img''article-header''article-content';
-        overflow-y: scroll;
-      }
+  display: grid;
+  //vertical mode
+  @media #{$break1} {
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+    justify-content: center;
+    grid-template-areas: "article-img" "article-header" "article-content";
+    overflow-y: scroll;
+  }
 
-    //horizontal mode
-      @media #{$break2} {
-        column-gap: 20px;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto ;
-        grid-template-areas: 'article-header article-img' 'article-content article-img';
-        // & .feed-article-img{
-        //     min-height:100%;
-        // }
-      }
+  //horizontal mode
+  @media #{$break2} {
+    column-gap: 20px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "article-header article-img" "article-content article-img";
+    // & .feed-article-img{
+    //     min-height:100%;
+    // }
+  }
 
-
-        //defining grid areas
+  //defining grid areas
   & .feed-article-header {
     grid-area: article-header;
-      display: flex;
-      justify-content: center;
-  
+    display: flex;
+    justify-content: center;
   }
   & .feed-article-content {
     grid-area: article-content;
     justify-content: center;
-    padding:0 2rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
   & .feed-article-img-hover-area {
     grid-area: article-img;
-    display:flex;
+    display: flex;
     justify-content: center;
     padding-left: 0.7 rem;
     overflow-y: visible;
     position: relative;
     transition: #{$transition-1};
-    &:hover {
-      position: relative;
-      min-width: 20rem;
-      height: 20rem;
-      left: 0;
-      overflow-y: visible;
-      transition: #{$transition-1};
-      .feed-article-img {
-        scale: 1.4;
-        transition:#{$transition-1};
+    @media #{$break1} {
+      &:hover {
+        position: relative;
+        min-width: 20rem;
+        height: 20rem;
+        left: 0;
         overflow-y: visible;
-        position: fixed;
-        top: 10rem;
-        left: 20rem;
-        opacity: 0.9;
+        transition: #{$transition-1};
+        .feed-article-img {
+          scale: 1.4;
+          transition: #{$transition-1};
+          overflow-y: visible;
+          position: fixed;
+          top: 10rem;
+          left: 20rem;
+          opacity: 0.9;
+        }
       }
     }
- }
+  }
 
- & .feed-article-img{
-  @include article-img; 
+  & .feed-article-img {
+    @include article-img;
+  }
 }
-
-
- }
-
