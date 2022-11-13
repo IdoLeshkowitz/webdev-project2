@@ -10,11 +10,13 @@
     justify-content: space-between;
     @media #{$break1}{
       column-gap: 2rem;
+      row-gap:2rem;
+       //min-height: 4000px;
     }
     @media #{$break2}{
-      row-gap:9rem;
+      row-gap:3rem;
     }
-    //min-height: calc(100%*5);
+   
     max-width: 100%;
     padding:0px var(--padding-feed-box-sides) var(--padding-feed-box-bottom) var(--padding-feed-box-sides);
     & .feed-box-item{
