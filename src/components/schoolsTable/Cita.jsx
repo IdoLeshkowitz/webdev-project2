@@ -3,7 +3,6 @@ import styles from "./../schoolsTable/Cita.module.css";
 import Rating from "./Rating";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-git 
 function Cita(classData) {
   let key = classData.key;
   let className = classData.className;
