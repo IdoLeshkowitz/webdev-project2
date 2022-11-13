@@ -83,7 +83,7 @@ function Forma() {
         </div>
          </div>
            <div className="form-body-rating">
-            <input type="radio" name="rating" id="dot-1" checked></input>
+            <input type="radio" name="rating" id="dot-1" required></input>
             <input type="radio" name="rating" id="dot-2"></input>
             <input type="radio" name="rating" id="dot-3"></input>
             <input type="radio" name="rating" id="dot-4"></input>
