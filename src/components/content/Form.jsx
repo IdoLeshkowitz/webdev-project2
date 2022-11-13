@@ -32,7 +32,7 @@ function Forma() {
               type="text"
               placeholder="enter your name"
               name="fullName"
-              pattern="[A-Za-z]"
+              pattern="[A-Za-z]{1,30}"
               required
             ></input>
           </div>
@@ -49,7 +49,8 @@ function Forma() {
           <div className="input-box">
             <span className="details">phone number</span>
             <input
-              type="text"
+              type="tel"
+              pattern='[0-9]{10}'
               placeholder="enter"
               name="email"
               required
@@ -82,7 +83,7 @@ function Forma() {
         </div>
          </div>
            <div className="form-body-rating">
-            <input type="radio" name="rating" id="dot-1"></input>
+            <input type="radio" name="rating" id="dot-1" checked></input>
             <input type="radio" name="rating" id="dot-2"></input>
             <input type="radio" name="rating" id="dot-3"></input>
             <input type="radio" name="rating" id="dot-4"></input>
