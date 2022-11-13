@@ -18,7 +18,7 @@ function Forma() {
     console.log(fullnameValidator(e.target.value));
   }
   return (
-    <div className="feed-box-item feed-form-box">
+    <div className="feed-box-item feed-form-box" id='book'>
       
       {/* form header */}
       <h1 className="form-header">Register</h1>

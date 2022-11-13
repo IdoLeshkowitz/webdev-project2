@@ -17,7 +17,7 @@ function SchoolsTable() {
   const [numberOfRows, setNumberOfROws] = useState(0);
 
   return (
-    <table  className="feed-box-item feed-schoolstable-box">
+    <table  className="feed-box-item feed-schoolstable-box" id='schoolstable'>
       <thead>
         <tr key = {"-1"}>
           {headers.map((header,index) => (

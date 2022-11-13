@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 function Place(props) {
   return (
-    <div className="feed-book-box feed-box-item" id="book">
+    <div className="feed-book-box feed-box-item" id="place">
       <h1 className="feed-article-header">Parma</h1>
         <p className="feed-article-content feed-book-article-content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse id
