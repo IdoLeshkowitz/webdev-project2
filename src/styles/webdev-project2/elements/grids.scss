@@ -122,7 +122,7 @@ $g-main-grid-template-columns: 1fr 1fr 1fr;
     overflow-y: visible;
     position: relative;
     transition: #{$transition-1};
-    @media #{$break1} {
+    @media #{$break2} {
       &:hover {
         position: relative;
         min-width: 20rem;
