@@ -32,13 +32,15 @@ function Forma() {
               type="text"
               placeholder="enter your name"
               name="fullName"
+              pattern="[A-Za-z]"
               required
             ></input>
           </div>
           <div className="input-box">
             <span className="details">email</span>
             <input
-              type="text"
+              type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               placeholder="enter "
               name="email"
               required
@@ -48,7 +50,7 @@ function Forma() {
             <span className="details">phone number</span>
             <input
               type="text"
-              placeholder="enter "
+              placeholder="enter"
               name="email"
               required
             ></input>
