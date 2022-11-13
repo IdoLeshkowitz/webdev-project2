@@ -5,6 +5,9 @@ import Content from "./components/Content";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
 //import Content from './components/Content';
 
 function App() {
